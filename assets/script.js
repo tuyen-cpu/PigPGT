@@ -1,7 +1,8 @@
 const chatInput = document.querySelector('.chat-input input');
 const chatHistory = document.querySelector('.chat-history');
 const click = document.querySelector('.click');
-const audio = new Audio('../sound.mp3'); // thay path/to/sound.mp3 bằng đường dẫn tới tệp âm thanh của bạn
+const audio = document.querySelector('#au');
+
 
 chatInput.addEventListener('keyup', function(event) {
     if (chatInput.value === '') {
