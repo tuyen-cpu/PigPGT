@@ -16,10 +16,12 @@ chatInput.addEventListener('keyup', function(event) {
 
         const botMessage = document.createElement('div');
         botMessage.classList.add('bot-message');
-        if (chatInput.value.contain('hello')) {
-            botMessage.textContent = 'Hello';
-        } else if (chatInput.value.contain('gâu gâu')) {
-            botMessage.textContent = 'Gâu gâu';
+        if (chatInput.value.includes('hello')) {
+            botMessage.textContent = 'hello';
+        } else if (chatInput.value.includes('gâu')) {
+            botMessage.textContent = 'gâu gâu';
+        } else if (chatInput.value.includes('tuyền')) {
+            botMessage.textContent = 'Tuyền đẹp trai';
         } else {
             botMessage.textContent = 'éc éc éc';
         }
@@ -45,13 +47,16 @@ click.addEventListener('click', function(event) {
 
     const botMessage = document.createElement('div');
     botMessage.classList.add('bot-message');
-    if (chatInput.value.contain('hello')) {
-        botMessage.textContent = 'Hello';
-    } else if (chatInput.value.contain('gâu gâu')) {
-        botMessage.textContent = 'Gâu gâu';
+    if (chatInput.value.includes('hello')) {
+        botMessage.textContent = 'hello';
+    } else if (chatInput.value.includes('gâu')) {
+        botMessage.textContent = 'gâu gâu';
+    } else if (chatInput.value.includes('tuyền')) {
+        botMessage.textContent = 'Tuyền đẹp trai';
     } else {
         botMessage.textContent = 'éc éc éc';
     }
+
     chatHistory.appendChild(botMessage);
 
     chatInput.value = '';
