@@ -16,7 +16,14 @@ chatInput.addEventListener('keyup', function(event) {
 
         const botMessage = document.createElement('div');
         botMessage.classList.add('bot-message');
-        botMessage.textContent = 'éc éc éc';
+        if (chatInput.value.contain('hello')) {
+            botMessage.textContent = 'Hello';
+        } else if (chatInput.value.contain('gâu gâu')) {
+            botMessage.textContent = 'Gâu gâu';
+        } else {
+            botMessage.textContent = 'éc éc éc';
+        }
+
         chatHistory.appendChild(botMessage);
 
         chatInput.value = '';
@@ -38,7 +45,13 @@ click.addEventListener('click', function(event) {
 
     const botMessage = document.createElement('div');
     botMessage.classList.add('bot-message');
-    botMessage.textContent = 'éc éc éc';
+    if (chatInput.value.contain('hello')) {
+        botMessage.textContent = 'Hello';
+    } else if (chatInput.value.contain('gâu gâu')) {
+        botMessage.textContent = 'Gâu gâu';
+    } else {
+        botMessage.textContent = 'éc éc éc';
+    }
     chatHistory.appendChild(botMessage);
 
     chatInput.value = '';
